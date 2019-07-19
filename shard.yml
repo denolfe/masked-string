@@ -1,0 +1,12 @@
+name: masked_string
+version: 0.1.0
+
+authors:
+  - Elliot DeNolf <denolfe@gmail.com>
+
+description: |
+  Simple masked string as an object
+
+crystal: 0.29.0
+
+license: MIT
