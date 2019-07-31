@@ -3,17 +3,22 @@ require "./spec_helper"
 describe Masked::Str do
   describe "masking" do
     it "masks properly" do
-      ms = Masked::Str.new("12349999", 4)
+      ms = Masked::Str.new("12349999")
       ms.value.should eq "****9999"
     end
 
     it "doesn't mask if size is less than chars to show" do
-      ms = Masked::Str.new("1234", 4)
+      ms = Masked::Str.new("1234")
       ms.value.should eq "1234"
     end
 
-    it "uses custom mask character" do
-      ms = Masked::Str.new("12349999", 4, '.')
+    it "can use custom mask length" do
+      ms = Masked::Str.new("12349999", 5)
+      ms.value.should eq "***49999"
+    end
+
+    it "can use custom mask character" do
+      ms = Masked::Str.new("12349999", '.')
       ms.value.should eq "....9999"
     end
   end
