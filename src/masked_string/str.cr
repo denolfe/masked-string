@@ -5,11 +5,6 @@ module Masked
                    @mask_char : Char = '*')
     end
 
-    def initialize(@value : String,
-                   @mask_char : Char = '*',
-                   @chars_to_show : Int32 = 4)
-    end
-
     def value
       return @value if @value.size <= @chars_to_show
       mask_size = @value.size - @chars_to_show

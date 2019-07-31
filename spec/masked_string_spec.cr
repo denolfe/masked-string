@@ -18,7 +18,7 @@ describe Masked::Str do
     end
 
     it "can use custom mask character" do
-      ms = Masked::Str.new("12349999", '.')
+      ms = Masked::Str.new("12349999", mask_char: '.')
       ms.value.should eq "....9999"
     end
   end
