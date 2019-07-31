@@ -9,7 +9,7 @@ Simple masked string wrapper class. Once instantiated, the unmasked value cannot
    ```yaml
    dependencies:
      masked_string:
-       github: denolfe/masked_string
+       github: denolfe/masked-string
    ```
 
 2. Run `shards install`
